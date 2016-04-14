@@ -133,5 +133,4 @@ def screenshot():  # say hi!
     return 'Screenshot taken.'
 
 if __name__ == '__main__':
-    app.debug = True
     app.run()
