@@ -113,7 +113,7 @@ def key():  # press keyboard
 
 @app.route('/webcam')
 @crossdomain(origin='*')
-def webcam():  # say hi!
+def webcam():
     if auth(request.args.get('password')) is False: return 'authfail'
     from VideoCapture import Device
     cam = Device()
@@ -122,7 +122,7 @@ def webcam():  # say hi!
 
 @app.route('/screenshot')
 @crossdomain(origin='*')
-def screenshot():  # say hi!
+def screenshot(): 
     if auth(request.args.get('password')) is False: return 'authfail'
     @entrypoint
     def show(backend='auto'):
